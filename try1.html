@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="station" src="https://cdn.glitch.me/e4dd2bbb-b73b-4b54-ac79-988dca88ae39%2Fstation-001.glb?v=1636766947617"></a-asset-item>     
+        //this is the station based on the skyscraper in the ETH Global Commons
+      <img id="skybox" src="https://cdn.glitch.me/e4dd2bbb-b73b-4b54-ac79-988dca88ae39%2Fngc1333_RGB-c2.jpeg?v=1636767435220"></img>
+      </a-assets>
+
+      <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 12" ></a-entity>
+
+      
+      <a-entity gltf-model="#station"></a-entity>
+      
+
+      
+    
+    <a-cylinder position="0 1 0" rotation="0 0 0" height="0.4" color="#4CC3D9"></a-cylinder>
+
+    
+    <a-entity id="solar-system" position="-6 0 -5" rotation="0 45 0">
+          <a-sphere id="earth" position="0 0.5 0" rotation="0 0 0" color="#4CC3D9"></a-sphere>
+      
+      <a-sphere id="mars" scale="0.5 0.5 0.5" position="-2 0.4 0" rotation="0 0 0" color="#4CC3D9"></a-sphere>
+    </a-entity>
+    
+    
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+ 
+      
+      <a-sky src="#skybox" rotation="0 -90 0"></a-sky>
+    
+    
+      //planets//
+    <a-entity id="planet01" position="150 20 -40">
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" scale="10 10 10"></a-sphere>
+      <a-torus position="0 0.75 -3" rotation="45 20 48" radius="15.5" color="#FFC65D"></a-torus>
+    </a-entity>
+      
+    </a-scene>
+  </body>
+</html>
