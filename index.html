@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <a-scene>
       <a-assets>
-        <a-asset-item id="station" src="https://cdn.glitch.me/1fecb5db-e113-4789-a68a-c77654c831d4%2Fshiney1.glb?v=1636786100175"></a-asset-item>     
-      <img id="skybox" src="https://cdn.glitch.me/e4dd2bbb-b73b-4b54-ac79-988dca88ae39%2Fngc1333_RGB-c2.jpeg?v=1636767435220"></img>
+        <a-asset-item id="station" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fstation-001v2.glb?v=1637217145427"></a-asset-item>
+        <img id="skybox" src="https://cdn.glitch.me/e4dd2bbb-b73b-4b54-ac79-988dca88ae39%2Fngc1333_RGB-c2.jpeg?v=1636767435220"></img>
       </a-assets>
 
       <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 12" ></a-entity>
-
+    
+    <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: highPoly; color: #009acd; metalness:1; opacity: 0.5">
+            <a-entity id="station-as-wearable" gltf-model="#station" scale="0.01 0.01 0.01" position="0 0 0.15" rotation="-90 0 0"></a-entity>
+    </a-entity>
+    <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: highPoly; color: #ffcccc; opacity: 0.5"></a-entity>
       
-      <a-entity id="statin001" gltf-model="#station"></a-entity>
-      
-
+      <a-entity id="station001" gltf-model="#station"></a-entity>
       
     
-    <a-cylinder position="0 1 0" rotation="0 0 0" height="0.4" color="#4CC3D9"></a-cylinder>
+    <a-cylinder position="0 0.25 0" rotation="0 0 0" height="0.3" color="#4CC3D9" metalness="1"></a-cylinder>
 
     
     <a-entity id="solar-system" position="-6 0 -5" rotation="0 45 0" scale="0.4 0.4 0.4">
@@ -26,14 +28,10 @@
       
       <a-sphere id="mars" scale="0.5 0.5 0.5" position="-2 0.4 0" rotation="0 0 0" color="#4CC3D9"></a-sphere>
     </a-entity>
-    
-    
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
  
     <a-light position="0.4 0 8"> </a-light>
       
     <a-entity position="0 12.5 12" light="color: #6b7cff"></a-entity>
-    
     
     <a-light position="0.05188 2.11908 0.75957" light="type: point"> </a-light>
     
@@ -42,7 +40,7 @@
       <a-sky src="#skybox" rotation="0 -90 0"></a-sky>
     
     
-      //planets//
+      <!--planets-->
     <a-entity id="planet01" position="150 20 -40">
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" scale="10 10 10"></a-sphere>
       <a-torus position="0 0.75 -3" rotation="45 20 48" radius="15.5" color="#FFC65D"></a-torus>
