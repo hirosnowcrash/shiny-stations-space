@@ -7,6 +7,12 @@
     <a-scene>
       <a-assets>
         <a-asset-item id="station" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fstation-001v2.glb?v=1637217145427"></a-asset-item>
+        <a-asset-item id="ring1" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fshiny-ring1.glb?v=1637385359380"></a-asset-item>
+        <a-asset-item id="ring2" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fshiny-ring2.glb?v=1637385358666"></a-asset-item>
+        <a-asset-item id="ring3" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fshiny-ring3.glb?v=1637385360342"></a-asset-item>
+        <a-asset-item id="ring4" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fshiny-ring4.glb?v=1637385359662"></a-asset-item>
+        <a-asset-item id="ring5" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fshiny-ring5.glb?v=1637385358666"></a-asset-item>
+        <a-asset-item id="ring5mirror" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fshiny-ring5mirror.glb?v=1637385825482"></a-asset-item>
         <img id="skybox" src="https://cdn.glitch.me/e4dd2bbb-b73b-4b54-ac79-988dca88ae39%2Fngc1333_RGB-c2.jpeg?v=1636767435220"></img>
       </a-assets>
 
@@ -22,6 +28,12 @@
     
     <a-cylinder position="0 0.25 0" rotation="0 0 0" height="0.3" color="#4CC3D9" metalness="1"></a-cylinder>
 
+    <a-entity gltf-model="#ring1" animation="property: rotation; to: 0 360 0; dur: 8000; easing: easeInOutQuad; loop: true"></a-entity>
+    <a-entity gltf-model="#ring2" animation="property: rotation; to: 0 -360 0; dur: 4000; easing: easeInOutQuad; loop: true"></a-entity>
+    <a-entity gltf-model="#ring3" animation="property: rotation; to: 0 360 0; dur: 4000; easing: linear; loop: true"></a-entity>
+    <a-entity gltf-model="#ring5" animation="property: rotation; to: 0 -360 0; dur: 6000; easing: linear; loop: true"></a-entity>
+    <a-entity gltf-model="#ring5mirror" animation="property: rotation; to: 0 360 0; dur: 6000; easing: linear; loop: true"></a-entity>
+    
     
     <a-entity id="solar-system" position="-6 0 -5" rotation="0 45 0" scale="0.4 0.4 0.4">
           <a-sphere id="earth" position="0 0.5 0" rotation="0 0 0" color="#4CC3D9"></a-sphere>
