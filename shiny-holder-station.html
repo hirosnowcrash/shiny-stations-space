@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="station" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fstation-001v2.glb?v=1637217145427"></a-asset-item>     
+        <img id="skybox" src="https://cdn.glitch.me/e4dd2bbb-b73b-4b54-ac79-988dca88ae39%2Fngc1333_RGB-c2.jpeg?v=1636767435220"></img>
+        <img id="lock-texture" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Flock-texture.png?v=1637207673122">
+        <!-- https://unsplash.com/photos/3wPJxh-piRw Jason Dent @jdent-->
+       <a-asset-item id="members-station" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fmembersstation.glb?v=1637216009394"></a-asset-item>     
+       <a-asset-item id="members-stuff" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fmembersstuff.glb?v=1637216011482"></a-asset-item>     
+       <a-asset-item id="members-avatars" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fmembers-avatars.glb?v=1637217641518"></a-asset-item>     
+
+      </a-assets>
+
+      <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 " ></a-entity>
+      
+      <a-entity id="station001" gltf-model="#station"
+                position="0 0 4">
+          <a-entity id="lockgroup" position="0 2.2 -12" rotation="90 0 0" scale="1 1 1">
+        <a-light color="#00ff00" light="type: point"></a-light>
+          <a-entity geometry="primitive: cylinder" id="lock" 
+                    position="0 2.2 0"
+                    rotation="0 0 0"
+                    scale="2 0.1 2"
+                    material="src: https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Flock-texture.png?v=1637207673122"
+                    animation="property: rotation; to: 0 -760 0; dur: 4000; easing: easeInOutQuad; loop: false"
+                    animation__2="property: rotation; to: 0 0 90; delay: 4200; dur: 2000; easing: easeOutExpo; loop: false">
+          </a-entity>
+        </a-entity>
+    </a-entity>
+           
+    <a-entity position="0 12.5 12" light="color: #6b7cff"></a-entity>
+    
+    <a-light position="0.05188 2.11908 0.75957" light="type: point"> </a-light>
+    
+    <a-entity light="type: ambient"></a-entity>
+    
+    <a-entity id="members-only" gltf-model="#members-station"
+                position="0 0 4">
+    </a-entity>
+    
+        <a-light color="#00ff00" light="type: point"
+                 position="0 0 25"
+                 animation="property: rotation; to: 0 -760 0; delay: 84200; dur: 4000; easing: easeInOutQuad; loop: false"></a-light>
+    
+    <a-entity id="members-stuff" gltf-model="#members-stuff"
+                position="0 0 4">
+    </a-entity>
+    
+    <a-entity id="members-avatars" gltf-model="#members-avatars"
+                position="0 0 4">
+    </a-entity>
+    
+    
+    <a-sky src="#skybox" rotation="0 -90 0"></a-sky>
+      
+    </a-scene>
+  </body>
+</html>
+
+<!--                  animation="property: rotation to: 0 0 360; dur: 2000; easing: linear; loop: false"
+                  animation__2="property: scale to: 1.1 1.1 1.1; dur: 1000; easing: linear; loop: false">-->
