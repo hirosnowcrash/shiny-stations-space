@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-  </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQ9E94VRG0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DQ9E94VRG0');
+    </script>
+      </head>
   <body>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <a-scene>
@@ -13,7 +21,6 @@
        <a-asset-item id="members-station" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fmembersstation.glb?v=1637216009394"></a-asset-item>     
        <a-asset-item id="members-stuff" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fmembersstuff.glb?v=1637216011482"></a-asset-item>     
        <a-asset-item id="members-avatars" src="https://cdn.glitch.me/01ec6f7b-7687-453e-9e56-5c822ee0f51d%2Fmembers-avatars.glb?v=1637217641518"></a-asset-item>     
-
       </a-assets>
 
       <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 7.5"></a-entity>
@@ -54,7 +61,6 @@
     <a-entity id="members-avatars" gltf-model="#members-avatars"
                 position="0 0 4">
     </a-entity>
-    
     
     <a-sky src="#skybox" rotation="0 -90 0"></a-sky>
       
